@@ -190,7 +190,7 @@ No known bugs at this time.
 <div align="center">
 <h1>Authors</h1>
 <h3>Simbonge Ngqentsu</h3>
-<p><a href="https://github.com">Github</a>) / <a href="https://twitter.com">Twitter</a></p>
+<p><a href="https://github.com">Github</a> / <a href="https://twitter.com">Twitter</a></p>
   <hr/>
 <h3>Pule Mathikha</h3>
 <p><a href="https://github.com/TheeKingZa">Github</a> / <a href="https://twitter.com/Pule_Mathikha">Twitter</a></p>
