@@ -158,6 +158,7 @@ No known bugs at this time.
 <div align="center">
 <h1>Simbonge Ngqentsu</h1>
 <p>[Github](https://github.com/) / [Twitter](https://twitter.com/)</p>
+  <hr/>
 <h1>Pule Mathikha<h1>
 <p><a href="https://github.com/TheeKingZa">Github</a> / <a href="https://twitter.com/Pule_Mathikha">Twitter</a></p>
 
