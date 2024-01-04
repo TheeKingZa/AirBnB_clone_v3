@@ -163,7 +163,7 @@ No known bugs at this time.
 <h3>Pule Mathikha</h3>
 <p><a href="https://github.com/TheeKingZa">Github</a> / <a href="https://twitter.com/Pule_Mathikha">Twitter</a></p>
 
-  </div>---
+  </div>
 
 ## License
 Public Domain. No copy write protection.
