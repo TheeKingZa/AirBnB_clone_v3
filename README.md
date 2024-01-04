@@ -156,7 +156,7 @@ No known bugs at this time.
 
 
 <div align="center">
-<h1># Authors</h1>
+<h1>Authors</h1>
 <h3>Simbonge Ngqentsu</h3>
 <p><a href="https://github.com">Github</a>) / <a href="https://twitter.com">Twitter</a></p>
   <hr/>
