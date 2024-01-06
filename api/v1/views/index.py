@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-index.py
+index.py endpoint that retrieves the number of each objects
 """
 from api.v1.views import app_views  # Import the app_views blueprint
 from flask import jsonify  # Import jsonify from Flask for JSON responses
