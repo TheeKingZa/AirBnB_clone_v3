@@ -17,6 +17,7 @@ The console is the first segment of the AirBnB project at Holberton School that 
 * [Bugs](#bugs)
 * [Authors](#authors)
 * [License](#license)
+* [Installing](#installing-packages-used)
 ---
 
 [^](#airbnb-clone)
@@ -199,6 +200,15 @@ No known bugs at this time.
 
 ## License
 Public Domain. No copy write protection.
+
+---
+
+# Installing Packages Used
+```
+  pip install -r requirements.txt
+```
+  Using a requirements.txt file is a common practice in Python projects to manage dependencies and ensure that everyone working on the project is using the same set of packages.
+
 ---
 
 [^](#table-of-content)
