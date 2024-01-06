@@ -34,8 +34,6 @@ class TestDBStorage(unittest.TestCase):
                 reload
     """
 
-    # Read: https://www.programcreek.com/python/example/57796/unittest.skipIf
-
     @unittest.skipIf(getenv("HBNB_TYPE_STORAGE") != "db",
                      "This test is only for database storage.")
     def setUp(self):
