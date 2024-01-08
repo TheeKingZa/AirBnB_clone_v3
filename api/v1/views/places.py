@@ -125,3 +125,49 @@ def update_place(place_id):
 
         # Return the updated Place object in JSON format with 200 status code
         return jsonify(place.to_dict()), 200
+
+
+# Updates a Place object: POST /api/v1/places_search
+@app_views.route('/places_search', methods=['POST'],
+                 strict_slashes=False)
+def places_search():
+    """Searches for Place objects based on JSON request body."""
+    # Ensure the request contains valid JSON
+    if not request.is_json:
+        abort(400, 'Not a JSON')
+
+    # Get the JSON data from the request
+    search_data = request.get_json()
+
+    # Extract the lists of State, City, and Amenity ids
+    states = search_data.get('states', [])
+    cities = search_data.get('cities', [])
+    amenities = search_data.get('amenities', [])
+
+    # Retrieve all places if the JSON body is empty
+    # or all lists are empty
+    if not states and not cities and not amenities:
+        places = storage.all(Place).values()
+    else:
+        places = set()
+
+        # Include all places for each State id listed
+        for state_id in states:
+            state = storage.get(State, state_id)
+            if state:
+                places.update(state.places)
+
+        # Include all places for each City id listed
+        for city_id in cities:
+            city = storage.get(City, city_id)
+            if city:
+                places.update(city.places)
+
+        # Filter places if amenities list is not empty
+        if amenities:
+            places = [place for place in places if
+                      all(amenity.id in place.amenities_ids
+                          for amenity_id in amenities)]
+
+    # Return the list of places in JSON format
+    return jsonify([place.to_dict() for place in places])
