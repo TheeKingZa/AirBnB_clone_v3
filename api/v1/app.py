@@ -36,7 +36,8 @@ if __name__ == '__main__':
     # Check if the script is being run directly
     if os.getenv("HBNB_API_HOST") and os.getenv("HBNB_API_PORT"):
         # If environment variables for host and port are set, use them
-        app.run(host=os.getenv("HBNB_API_HOST"), port=os.getenv("HBNB_API_PORT"), threaded=True)
+        app.run(host=os.getenv("HBNB_API_HOST"),
+                port=os.getenv("HBNB_API_PORT"), threaded=True)
         app.run(host=os.getenv("HBNB_API_HOST"),
                 port=os.getenv("HBNB_API_PORT"), threaded=True)
     else:
