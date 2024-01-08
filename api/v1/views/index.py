@@ -7,7 +7,7 @@ from flask import jsonify
 from models import storage
 
 
-@app_views.route('/status', methods=['GET'])
+@app_views.route("/status")
 def status_ok():
     """
     Defines a route for '/status' that
@@ -16,7 +16,7 @@ def status_ok():
     return jsonify({"status": "OK"})
 
 
-@app_views.route('/stats', methods=['GET'])
+@app_views.route("/stats")
 def obj_stats():
     """
     Defines a route for '/stats' that
