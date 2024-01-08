@@ -2,7 +2,7 @@
 """ Creates a Flask web service"""
 
 from flask import Flask, make_response, jsonify
-import os import getenv
+import os
 from flask_cors import CORS
 from models import storage
 from api.v1.views import app_views
