@@ -32,13 +32,13 @@ def not_found(error):
     return make_response(jsonify({"error": "Not found"}), 404)
 
 
-@app.errorhandler(400)
-def bad_request(error):
-    """ Handles 400 errors with an 'error' message"""
-    return make_response(jsonify({'error': error.description}), 400)
-
-
 if __name__ == '__main__':
-    HOST = getenv('HBNB_API_HOST', '0.0.0.0')
-    PORT = int(getenv('HBNB_API_PORT', 5000))
-    app.run(host=HOST, port=PORT, threaded=True)
+    # Check if the script is being run directly
+    if os.getenv("HBNB_API_HOST") and os.getenv("HBNB_API_PORT"):
+        # If environment variables for host and port are set, use them
+        app.run(host=os.getenv("HBNB_API_HOST"), port=os.getenv("HBNB_API_PORT"), threaded=True)
+        app.run(host=os.getenv("HBNB_API_HOST"),
+                port=os.getenv("HBNB_API_PORT"), threaded=True)
+    else:
+        # Otherwise, run the app on host '0.0.0.0' and port 5000
+        app.run(host='0.0.0.0', port=5000, threaded=True)
